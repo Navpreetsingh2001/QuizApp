@@ -25,7 +25,10 @@ class MainActivity : AppCompatActivity() {
            }
            else{
                val intent = Intent(this,QuizQuestionActivity::class.java)
+
+               intent.putExtra(Constants.USER_NAME ,et_name.text.toString())
                startActivity(intent)
+               //to end previos page
                finish()
            }
        }
